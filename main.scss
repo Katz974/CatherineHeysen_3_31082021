@@ -280,32 +280,32 @@ footer {
 /* Section */
 
 .section {
+  @include flex-column-center;
+  width: 100%;
+
+  /* Section exploration */
+
+  &__heading {
     @include flex-column-center;
-    width: 100%;
-  
-    /* Section exploration */
-  
-    &__heading {
+    height: 290px;
+    background-color: $color-grey-light;
+    &__exploration {
       @include flex-column-center;
-      height: 290px;
-      background-color: $color-grey-light;
-      &__exploration {
-        @include flex-column-center;
-        text-align: center;
-        width: 81%;
-        height: 100%;
-        > div > h3:nth-child(3) {
-          margin-bottom: 30px;
-        }
-      }
-      div h2 {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-bottom: 12px;
+      text-align: center;
+      width: 81%;
+      height: 100%;
+      > div > h3:nth-child(3) {
+        margin-bottom: 30px;
       }
     }
+    div h2 {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 12px;
+    }
+  }
 
-    /* Section "working" */
+  /* Section "working" */
 
   &__working {
     @include flex-column-center;
@@ -369,7 +369,6 @@ footer {
       }
     }
   }
-
 
   /* Section "restaurants" */
 
@@ -566,156 +565,169 @@ footer {
     }
 
     &__container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-top: -50px;
+      border-radius: 40px 40px 0 0;
+      background-color: $color-grey-light;
+      &__heading {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 90%;
+        padding-top: 40px;
+        > i.fa-heart {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 15px;
+
+          &:hover {
+            background: -webkit-linear-gradient(#9c59dc 0%, #ee74da 99.72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            transition: ease 1s;
+          }
+        }
+      }
+
+      &__dishes-choice {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 94%;
+        > h3 {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          padding-left: 5px;
+          padding-top: 45px;
+        }
+        > div.green-dash {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          padding-left: 5px;
+          > div {
+            width: 40px;
+            height: 3px;
+            background-color: $colortertiary;
+            margin-top: 5px;
+          }
+        }
+
+        &__dish-cartridge {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          width: 100%;
+          min-height: 68px;
+          background-color: white;
+          border-radius: 20px;
+          margin-top: 14px;
+          box-shadow: 3px -4px 39px -7px rgba(59, 59, 59, 0.43);
+          cursor: pointer;
+          /* Animation menu : apparition progressive des plats */
+          transform: translateY(100%);
+          opacity: 0;
+          animation: slideInUp 1s forwards;
+          @for $i from 3 through 100 {
+            &:nth-child(#{$i}) {
+              animation-delay: #{($i - 3) * 0.3}s;
+            }
+          }
+
+          > div:nth-child(1) {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            margin: 12px 0 12px 11px;
+            // f
+            flex: 1 1;
+            margin-right: 20px;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            min-width: 0;
+
+            > h3 {
+              font-weight: 500;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+            }
+
+            > div.dish-subtitle {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              padding-top: 5px;
+              flex-grow: 1;
+              flex-shrink: 1;
+              max-width: 100%;
+              h4:nth-child(1) {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-right: 10px;
+              }
+              > h4.price {
+                font-weight: 500;
+              }
+            }
+          }
+          > .green-choice {
+            display: flex;
+            float: right;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            vertical-align: baseline;
+            width: 0px;
+            height: 0px;
+            overflow: hidden;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            color: white;
+            background-color: $colortertiary;
+            font-size: 25px;
+            cursor: pointer;
+            transition: width 330ms linear;
+            > i {
+              transform: rotate(0deg);
+              transition: transform 330ms linear;
+              display: block;
+            }
+          }
+          &:hover > .green-choice {
+            width: 70px;
+            height: auto;
+            > i {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+      &__order {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: auto;
-        margin-top: -50px;
-        border-radius: 40px 40px 0 0;
-        background-color: $color-grey-light;
-        &__heading {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: space-between;
-          width: 90%;
-          padding-top: 40px;
-          > i.fa-heart {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-right: 15px;
-  
-            &:hover {
-              background: -webkit-linear-gradient(#9c59dc 0%, #ee74da 99.72%);
-              background-clip: text;
-              -webkit-background-clip: text;
-              color: transparent;
-              font-weight: 900;
-              transition: ease 1s;
-            }
-          }
-        }
-  
-        &__dishes-choice {
-          display: flex;
-          flex-flow: column wrap;
-          justify-content: center;
-          align-items: center;
-          width: 94%;
-          > h3 {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            padding-left: 5px;
-            padding-top: 45px;
-          }
-          > div.green-dash {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            padding-left: 5px;
-            > div {
-              width: 40px;
-              height: 3px;
-              background-color: $colortertiary;
-              margin-top: 5px;
-            }
-          }
-  
-          &__dish-cartridge {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-start;
-            width: 100%;
-            min-height: 68px;
-            background-color: white;
-            border-radius: 20px;
-            margin-top: 14px;
-            box-shadow: 3px -4px 39px -7px rgba(59, 59, 59, 0.43);
-            cursor: pointer;
-            /* Animation menu : apparition progressive des plats */
-            transform: translateY(100%);
-            opacity: 0;
-            animation: slideInUp 1s forwards;
-            @for $i from 3 through 100 {
-              &:nth-child(#{$i}) {
-                animation-delay: #{($i - 3) * 0.3}s;
-              }
-            }
-
-            > div:nth-child(1) {
-              display: flex;
-              flex-flow: column wrap;
-              justify-content: flex-start;
-              margin: 12px 0 12px 11px;
-              // f
-              flex: 1 1;
-              margin-right: 20px;
-              text-overflow: ellipsis;
-              max-width: 100%;
-              min-width: 0;
-  
-              > h3 {
-                font-weight: 500;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 100%;
-              }
-  
-              > div.dish-subtitle {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                padding-top: 5px;
-                flex-grow: 1;
-                flex-shrink: 1;
-                max-width: 100%;
-                h4:nth-child(1) {
-                  white-space: nowrap;
-                  text-overflow: ellipsis;
-                  overflow: hidden;
-                  padding-right: 10px;
-                }
-                > h4.price {
-                  font-weight: 500;
-                }
-              }
-            }          > .green-choice {
-                display: flex;
-                float: right;
-                flex-flow: row wrap;
-                justify-content: center;
-                align-items: center;
-                vertical-align: baseline;
-                width: 0px;
-                height: 0px;
-                overflow: hidden;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-                color: white;
-                background-color: $colortertiary;
-                font-size: 25px;
-                cursor: pointer;
-                transition: width 330ms linear;
-                > i {
-                  transform: rotate(0deg);
-                  transition: transform 330ms linear;
-                  display: block;
-                }
-              }
-              &:hover > .green-choice {
-                width: 70px;
-                height: auto;
-                > i {
-                  transform: rotate(360deg);
-                }
-              }
-            }
-          }
+        padding-top: 50px;
+        padding-bottom: 83px;
+      }
+    }
+  }
+}

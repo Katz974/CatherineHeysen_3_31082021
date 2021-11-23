@@ -304,3 +304,68 @@ footer {
         margin-bottom: 12px;
       }
     }
+
+    /* Section "working" */
+
+  &__working {
+    @include flex-column-center;
+    height: 440px;
+    width: 100%;
+
+    nav {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 86.66%;
+      margin-left: auto;
+      margin-right: auto;
+      h2 {
+        margin-left: 10px;
+      }
+
+      /* Insert/working */
+      > .insert {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: 72px;
+        border: 0;
+        background-color: $color-grey-light;
+        margin-top: 35px;
+        margin-left: 20px;
+        margin-right: auto;
+        border-radius: 20px;
+        box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
+        padding: 0;
+        > i {
+          color: grey;
+          margin-left: 22px;
+          margin-right: 25px;
+          font-size: 18px;
+        }
+        > span.insert--text {
+          font-family: $font-roboto;
+        }
+        > span.number-bullet {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          text-align: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 20px;
+          text-align: center;
+          background-color: #9c59dc;
+          color: white;
+          margin: 0;
+          margin-left: -12px;
+          font-family: $font-roboto;
+          font-size: 13px;
+        }
+      }
+    }
+  }

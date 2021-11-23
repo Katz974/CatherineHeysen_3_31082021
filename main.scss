@@ -240,3 +240,39 @@ footer {
   box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
   color: white;
 }
+
+/* Button */
+
+.btn {
+  &--exploration {
+    @extend .color-shape-button;
+    width: 220px;
+    height: 50px;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 2px 8px 8px 0px black;
+    }
+  }
+
+  &--text {
+    color: white;
+    font-family: $font-roboto;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+
+  &__order {
+    @extend .color-shape-button;
+    width: 186px;
+    height: 50px;
+    > span.text {
+      color: white;
+      font-family: $font-roboto;
+    }
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 2px 8px 8px 0px black;
+    }
+  }
+}

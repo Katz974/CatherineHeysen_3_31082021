@@ -648,3 +648,43 @@ footer {
                 animation-delay: #{($i - 3) * 0.3}s;
               }
             }
+
+            > div:nth-child(1) {
+              display: flex;
+              flex-flow: column wrap;
+              justify-content: flex-start;
+              margin: 12px 0 12px 11px;
+              // f
+              flex: 1 1;
+              margin-right: 20px;
+              text-overflow: ellipsis;
+              max-width: 100%;
+              min-width: 0;
+  
+              > h3 {
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+              }
+  
+              > div.dish-subtitle {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                padding-top: 5px;
+                flex-grow: 1;
+                flex-shrink: 1;
+                max-width: 100%;
+                h4:nth-child(1) {
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  padding-right: 10px;
+                }
+                > h4.price {
+                  font-weight: 500;
+                }
+              }
+            }

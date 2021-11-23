@@ -230,3 +230,13 @@ footer {
     }
   }
 }
+
+/* Extension - silent class */
+.color-shape-button {
+  @include flex-column-center;
+  text-align: center;
+  border-radius: 25px;
+  background: linear-gradient(to left top, #9c59dc 0%, #ee74da 99.72%);
+  box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+}

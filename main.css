@@ -297,4 +297,28 @@ footer {
 .location > span > input:focus {
   border: 0px;
 }
+
+/* Extension - silent class */
+.color-shape-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9c59dc), color-stop(99.72%, #ee74da));
+  background: linear-gradient(to left top, #9c59dc 0%, #ee74da 99.72%);
+  -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */

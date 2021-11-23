@@ -486,3 +486,60 @@ footer {
       }
     }
   }
+
+  /* Section Footer */
+
+  &__footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 89%;
+    max-width: 1245px;
+    color: white;
+    &--index {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      width: 89%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+      > a {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        font-family: $font-roboto;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        margin-bottom: 10px;
+        > span > i {
+          font-size: 12px;
+          margin-right: 12px;
+        }
+      }
+    }
+    &--page-restaurant {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+      > a {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        font-family: $font-roboto;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        margin-bottom: 10px;
+        > span > i {
+          font-size: 12px;
+          margin-right: 12px;
+        }
+      }
+    }
+  }

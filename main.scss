@@ -14,6 +14,15 @@ $loader-thickness1: 5px;
 $loader-thickness2: 8px;
 $loader-thickness3: 24px;
 
+/* mixins */
+
+@mixin flex-column-center {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Loader */
 
 .loader {

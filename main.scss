@@ -458,3 +458,31 @@ footer {
                 font-weight: lighter;
               }
             }
+            & > div.heart {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5em;
+              padding: 0 25px 0 0;
+              width: 20px;
+              height: 20px;
+              > i.fa-heart {
+                cursor: pointer;
+                &:hover {
+                  background: -webkit-linear-gradient(
+                    #9c59dc 0%,
+                    #ee74da 99.72%
+                  );
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  color: transparent;
+                  font-weight: 900;
+                  transition: ease 1s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

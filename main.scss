@@ -687,4 +687,35 @@ footer {
                   font-weight: 500;
                 }
               }
+            }          > .green-choice {
+                display: flex;
+                float: right;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                vertical-align: baseline;
+                width: 0px;
+                height: 0px;
+                overflow: hidden;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: white;
+                background-color: $colortertiary;
+                font-size: 25px;
+                cursor: pointer;
+                transition: width 330ms linear;
+                > i {
+                  transform: rotate(0deg);
+                  transition: transform 330ms linear;
+                  display: block;
+                }
+              }
+              &:hover > .green-choice {
+                width: 70px;
+                height: auto;
+                > i {
+                  transform: rotate(360deg);
+                }
+              }
             }
+          }

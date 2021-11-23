@@ -158,3 +158,35 @@ footer {
   }
   // font-size: 1.5em;
 }
+
+/* logo */
+
+.logo {
+  height: 60px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  &--footer {
+    font-family: $font-shrikhand;
+    font-size: 18px;
+    color: white;
+    padding-top: 22px;
+    padding-bottom: 15px;
+  }
+  &--back-arrow {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    width: 89%;
+    height: 60px;
+    max-width: 1246px;
+    margin-left: auto;
+    margin-right: auto;
+    > div > i {
+      margin-right: 65px;
+    }
+  }
+}

@@ -1,2 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
+/* Loader */
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: baseline;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 99999;
+  -webkit-animation: loader 3s forwards;
+          animation: loader 3s forwards;
+  font-family: "Shrikhand", cursive;
+}
+
+.loader--rotate-mix-shift {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  border-top-color: #99e2d0;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+.loader--rotate-mix-shift:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  left: 8px;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  border-top-color: #ff79da;
+  -webkit-animation: spin 6s linear infinite;
+          animation: spin 6s linear infinite;
+}
+
+.loader--rotate-mix-shift:before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  right: 24px;
+  left: 24px;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  border-top-color: #9356dc;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
 /*# sourceMappingURL=main.css.map */

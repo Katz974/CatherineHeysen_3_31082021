@@ -543,3 +543,24 @@ footer {
       }
     }
   }
+
+  /* Page restaurant */
+
+  &__menu {
+    @include flex-column-center;
+    width: 100%;
+    height: auto;
+    background-color: $color-grey-light;
+    &__restaurant {
+      @include flex-column-center;
+      width: 100vw;
+      max-width: 1400px;
+      &--image {
+        @include flex-column-center;
+        width: 100%;
+        > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }

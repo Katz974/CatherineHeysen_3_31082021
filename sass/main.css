@@ -65,7 +65,7 @@
           animation: spin 3s linear infinite;
 }
 
-/* keyframes */
+/* KEYFRAMES */
 @-webkit-keyframes loader {
   90% {
     opacity: 1;
@@ -123,7 +123,7 @@
   }
 }
 
-/* roots */
+/* ROOTS */
 * {
   margin: 0;
   padding: 0;
@@ -226,38 +226,6 @@ footer {
   margin-right: auto;
 }
 
-::-webkit-input-placeholder {
-  color: #353535;
-}
-
-:-ms-input-placeholder {
-  color: #353535;
-}
-
-::-ms-input-placeholder {
-  color: #353535;
-}
-
-::placeholder {
-  color: #353535;
-}
-
-::-webkit-input-placeholder:focus {
-  border: 0px;
-}
-
-:-ms-input-placeholder:focus {
-  border: 0px;
-}
-
-::-ms-input-placeholder:focus {
-  border: 0px;
-}
-
-::placeholder:focus {
-  border: 0px;
-}
-
 /* logo */
 .logo {
   height: 60px;
@@ -348,12 +316,12 @@ footer {
   font-weight: 900;
   width: 150px;
   padding-left: 10px;
-  border: 0px;
+  border: 1px solid transparent;
   text-overflow: ellipsis;
 }
 
 .location > span > input:focus {
-  border: 0px;
+  border: 1px solid transparent;
 }
 
 /* Extension - silent class */
@@ -555,6 +523,7 @@ footer {
   -webkit-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
   padding: 0;
+  cursor: pointer;
 }
 
 .section__working nav > .insert > i {
@@ -588,6 +557,14 @@ footer {
   margin-left: -12px;
   font-family: "Roboto", sans-serif;
   font-size: 13px;
+}
+
+.section__working nav > .insert:hover {
+  background-color: #f5edff;
+}
+
+.section__working nav > .insert:hover > i {
+  color: #9356dc;
 }
 
 .section__restaurants {

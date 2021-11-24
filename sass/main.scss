@@ -6,6 +6,7 @@ $colortertiary: #99e2d0;
 $color-grey-dark: #353535;
 $color-grey-middle: #e5e5e5;
 $color-grey-light: #f9f9f9;
+$color-focus-insert: #f5edff;
 $font-roboto: "Roboto", sans-serif;
 $font-shrikhand: "Shrikhand", cursive;
 $loader-duration: 3s;
@@ -73,7 +74,7 @@ $loader-thickness3: 24px;
   }
 }
 
-/* keyframes */
+/* KEYFRAMES */
 
 @keyframes loader {
   90% {
@@ -104,7 +105,7 @@ $loader-thickness3: 24px;
   }
 }
 
-/* roots */
+/* ROOTS */
 
 * {
   margin: 0;
@@ -191,13 +192,13 @@ footer {
   margin-right: auto;
 }
 
-::placeholder {
-  color: $color-grey-dark;
-  &:focus {
-    border: 0px;
-  }
-  // font-size: 1.5em;
-}
+// ::placeholder {
+//   color: $color-grey-dark;
+//   &:focus {
+//     border: 0px;
+//   }
+//   // font-size: 1.5em;
+// }
 
 /* logo */
 
@@ -253,10 +254,10 @@ footer {
       font-weight: 900;
       width: 150px;
       padding-left: 10px;
-      border: 0px;
+      border: 1px solid transparent;
       text-overflow: ellipsis;
       &:focus {
-        border: 0px;
+        border: 1px solid transparent;
       }
     }
   }
@@ -372,6 +373,7 @@ footer {
         border-radius: 20px;
         box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
         padding: 0;
+        cursor: pointer;
         > i {
           color: grey;
           margin-left: 22px;
@@ -396,6 +398,12 @@ footer {
           margin-left: -12px;
           font-family: $font-roboto;
           font-size: 13px;
+        }
+        &:hover {
+          background-color: $color-focus-insert;
+        }
+        &:hover > i {
+          color: $colorprimary;
         }
       }
     }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap');
 
 $colorprimary: #9356dc;
 $colorsecondary: #ff79da;
@@ -7,8 +7,8 @@ $color-grey-dark: #353535;
 $color-grey-middle: #e5e5e5;
 $color-grey-light: #f9f9f9;
 $color-focus-insert: #f5edff;
-$font-roboto: "Roboto", sans-serif;
-$font-shrikhand: "Shrikhand", cursive;
+$font-roboto: 'Roboto', sans-serif;
+$font-shrikhand: 'Shrikhand', cursive;
 $loader-duration: 3s;
 $loader-thickness: 4px;
 $loader-thickness1: 5px;
@@ -48,7 +48,7 @@ $loader-thickness3: 24px;
     border-top-color: $colortertiary;
     animation: spin 1s linear infinite;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: $loader-thickness2;
       bottom: $loader-thickness2;
@@ -60,7 +60,7 @@ $loader-thickness3: 24px;
       animation: spin 6s linear infinite;
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: $loader-thickness3;
       bottom: $loader-thickness3;
@@ -150,25 +150,25 @@ h3 {
 }
 
 h1 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: 'Shrikhand', sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: bold;
 }
 
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: lighter;
 }
 
 h4 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: lighter;
 }
@@ -218,7 +218,6 @@ footer {
       position: absolute;
       margin-top: 25px;
       margin-left: 25px;
-      // z-index: 1;
     }
     > div:nth-child(2) {
       display: flex;
@@ -328,6 +327,7 @@ footer {
       text-align: center;
       width: 81%;
       height: 100%;
+      min-width: fit-content;
       > div > h3:nth-child(3) {
         margin-bottom: 30px;
       }
@@ -336,6 +336,9 @@ footer {
       padding-left: 20px;
       padding-right: 20px;
       margin-bottom: 12px;
+    }
+    button:hover {
+      cursor: pointer;
     }
   }
 
@@ -353,11 +356,21 @@ footer {
       align-items: flex-start;
       width: 86.66%;
       margin-left: auto;
-
       margin-right: auto;
-      // h2 {
-      //   margin-left: -10px;
-      // }
+      @media (min-width: 400px) {
+        @include flex-column-center;
+      }
+
+      > div {
+        @media (min-width: 400px) {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          text-align: start;
+          width: 300px;
+          margin-left: -12px;
+        }
+      }
 
       /* Insert/working */
       > .insert {
@@ -372,14 +385,15 @@ footer {
         background-color: $color-grey-light;
         margin-top: 35px;
         margin-left: 10px;
-        // padding-right: 20px;
-        // white-space: nowrap;
-        // text-overflow: ellipsis;
-        // overflow: hidden;
         border-radius: 20px;
         box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
         padding: 0;
         cursor: pointer;
+        @media (min-width: 400px) {
+          width: 300px;
+          min-width: unset;
+        }
+
         > i {
           color: grey;
           margin-left: 22px;
@@ -430,6 +444,11 @@ footer {
       padding-bottom: 45px;
       margin-left: auto;
       margin-right: auto;
+      @media (min-width: 700px) {
+        display: flex;
+        flex-flow: row wrap;
+        width: 700px;
+      }
       > div.section__restaurants--title {
         display: flex;
         justify-content: center;

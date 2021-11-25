@@ -38,7 +38,7 @@
 }
 
 .loader--rotate-mix-shift:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 8px;
   bottom: 8px;
@@ -52,7 +52,7 @@
 }
 
 .loader--rotate-mix-shift:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 24px;
   bottom: 24px;
@@ -170,25 +170,25 @@ h3 {
 }
 
 h1 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: 'Shrikhand', sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: bold;
 }
 
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: lighter;
 }
 
 h4 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: lighter;
 }
@@ -450,6 +450,9 @@ footer {
   text-align: center;
   width: 81%;
   height: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 .section__heading__exploration > div > h3:nth-child(3) {
@@ -460,6 +463,10 @@ footer {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 12px;
+}
+
+.section__heading button:hover {
+  cursor: pointer;
 }
 
 .section__working {
@@ -500,6 +507,42 @@ footer {
   /* Insert/working */
 }
 
+@media (min-width: 400px) {
+  .section__working nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 400px) {
+  .section__working nav > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: start;
+    width: 300px;
+    margin-left: -12px;
+  }
+}
+
 .section__working nav > .insert {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -527,6 +570,13 @@ footer {
           box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
   padding: 0;
   cursor: pointer;
+}
+
+@media (min-width: 400px) {
+  .section__working nav > .insert {
+    width: 300px;
+    min-width: unset;
+  }
 }
 
 .section__working nav > .insert > i {
@@ -609,6 +659,19 @@ footer {
   padding-bottom: 45px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 700px) {
+  .section__restaurants nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    width: 700px;
+  }
 }
 
 .section__restaurants nav > div.section__restaurants--title {
@@ -1689,4 +1752,3 @@ footer {
   padding-top: 50px;
   padding-bottom: 83px;
 }
-/*# sourceMappingURL=main.css.map */

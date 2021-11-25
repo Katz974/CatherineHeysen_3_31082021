@@ -490,18 +490,14 @@ footer {
   /* Insert/working */
 }
 
-.section__working nav h2 {
-  margin-left: 10px;
-}
-
 .section__working nav > .insert {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -510,13 +506,12 @@ footer {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 100%;
+  min-width: 100%;
   height: 72px;
   border: 0;
   background-color: #f9f9f9;
   margin-top: 35px;
-  margin-left: 20px;
-  margin-right: auto;
+  margin-left: 10px;
   border-radius: 20px;
   -webkit-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
@@ -533,6 +528,7 @@ footer {
 
 .section__working nav > .insert > span.insert--text {
   font-family: "Roboto", sans-serif;
+  padding-right: 10px;
 }
 
 .section__working nav > .insert > span.number-bullet {
@@ -598,7 +594,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 89%;
+  width: 100%;
   height: auto;
   padding-bottom: 45px;
   margin-left: auto;
@@ -638,7 +634,7 @@ footer {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 89%;
-  height: 260px;
+  height: auto;
   position: relative;
   background-color: white;
   border-radius: 10px 10px 10px 10px;
@@ -672,6 +668,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 23%;
+  min-width: 60px;
   height: 12%;
   background-color: #99e2d0;
   color: #158766;
@@ -696,12 +693,13 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding-left: 15px;
-  padding-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -728,7 +726,8 @@ footer {
 
 .section__restaurants nav > div.restaurant-card > a > div.restaurant-info > div.restaurant-info--naming > .text--restolocation {
   font-family: "Roboto", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 .section__restaurants nav > div.restaurant-card > a > div.restaurant-info > div.heart {

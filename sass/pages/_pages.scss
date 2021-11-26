@@ -400,14 +400,23 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+        position: relative;
         width: 90%;
-        padding-top: 40px;
+        padding-top: 35px;
+        > h1.restaurant-name-menu {
+          font-size: 28px;
+          margin-right: 20px;
+          width: 80%;
+        }
         > i.fa-heart {
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
-          padding-right: 15px;
-
+          position: absolute;
+          right: 20px;
+          top: 40px;
+          font-size: 23px;
+          vertical-align: text-top;
           &:hover {
             background: -webkit-linear-gradient(#9c59dc 0%, #ee74da 99.72%);
             background-clip: text;
@@ -432,7 +441,7 @@
           align-items: center;
           width: 100%;
           padding-left: 5px;
-          padding-top: 45px;
+          padding-top: 35px;
         }
         > div.green-dash {
           display: flex;

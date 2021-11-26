@@ -1,0 +1,49 @@
+/* Loader */
+
+.loader {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  vertical-align: baseline;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 99999;
+  animation: loader $loader-duration forwards;
+  font-family: $font-shrikhand;
+  &--rotate-mix-shift {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: $loader-thickness solid transparent;
+    border-top-color: $colortertiary;
+    animation: spin 1s linear infinite;
+    &:after {
+      content: '';
+      position: absolute;
+      top: $loader-thickness2;
+      bottom: $loader-thickness2;
+      right: $loader-thickness2;
+      left: $loader-thickness2;
+      border-radius: 50px;
+      border: $loader-thickness solid transparent;
+      border-top-color: $colorsecondary;
+      animation: spin 6s linear infinite;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: $loader-thickness3;
+      bottom: $loader-thickness3;
+      right: $loader-thickness3;
+      left: $loader-thickness3;
+      border-radius: 50px;
+      border: $loader-thickness solid transparent;
+      border-top-color: $colorprimary;
+      animation: spin 3s linear infinite;
+    }
+  }
+}

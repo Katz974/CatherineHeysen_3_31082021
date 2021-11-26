@@ -1,0 +1,555 @@
+/* Section */
+
+.section {
+  @include flex-column-center;
+  width: 100%;
+
+  /* Section exploration */
+
+  &__heading {
+    @include flex-column-center;
+    height: 290px;
+    background-color: $color-grey-light;
+    &__exploration {
+      @include flex-column-center;
+      text-align: center;
+      width: 81%;
+      height: 100%;
+      min-width: fit-content;
+      > div > h3:nth-child(3) {
+        margin-bottom: 30px;
+      }
+    }
+    div h2 {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 12px;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+  }
+
+  /* Section "working" */
+
+  &__working {
+    @include flex-column-center;
+    height: 440px;
+    width: 100%;
+
+    nav {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 86.66%;
+      margin-left: auto;
+      margin-right: auto;
+      @media (min-width: 400px) {
+        @include flex-column-center;
+      }
+
+      > div {
+        @media (min-width: 400px) {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          text-align: start;
+          width: 300px;
+          margin-left: -12px;
+          @media (min-width: 400px) {
+            width: 384px;
+          }
+        }
+      }
+
+      /* Insert/working */
+      > .insert {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        min-width: 100%;
+        height: 72px;
+        border: 0;
+        background-color: $color-grey-light;
+        margin-top: 35px;
+        margin-left: 10px;
+        border-radius: 20px;
+        box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.15);
+        padding: 0;
+        cursor: pointer;
+        @media (min-width: 400px) {
+          width: 380px;
+          min-width: unset;
+        }
+
+        > i {
+          color: grey;
+          margin-left: 22px;
+          margin-right: 25px;
+          font-size: 18px;
+        }
+        > span.insert--text {
+          font-family: $font-roboto;
+          padding-right: 10px;
+        }
+        > span.number-bullet {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          text-align: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 20px;
+          text-align: center;
+          background-color: #9c59dc;
+          color: white;
+          margin: 0;
+          margin-left: -12px;
+          font-family: $font-roboto;
+          font-size: 13px;
+        }
+        &:hover {
+          background-color: $color-focus-insert;
+        }
+        &:hover > i {
+          color: $colorprimary;
+        }
+      }
+    }
+  }
+
+  /* Section "restaurants" */
+
+  &__restaurants {
+    @include flex-column-center;
+    width: 100%;
+    height: auto;
+    background-color: $color-grey-light;
+    nav {
+      @include flex-column-center;
+      width: 100%;
+      height: auto;
+      padding-bottom: 45px;
+      margin-left: auto;
+      margin-right: auto;
+      @media (min-width: 700px) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        max-width: 700px;
+        // padding-left: 20px;
+        // padding-right: 20px;
+      }
+      > div.section__restaurants--title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        @media (min-width: 700px) {
+          justify-content: flex-start;
+          padding-left: 20px;
+        }
+        > div {
+          display: flex;
+          justify-content: flex-start;
+          width: 89%;
+          padding: 55px 0 25px 0;
+        }
+      }
+      & > div.restaurant-card {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        width: 89%;
+        height: auto;
+        position: relative;
+        background-color: white;
+        border-radius: 10px 10px 10px 10px;
+        margin-bottom: 20px;
+        filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.15));
+        & > a {
+          width: 100%;
+          > img {
+            width: 100%;
+            height: 174px;
+            flex: 0 0 auto;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+          }
+          & > span.new {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 23%;
+            min-width: 60px;
+            height: 12%;
+            background-color: $colortertiary;
+            color: #158766;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            text-align: center;
+            border-radius: 2px;
+            font-family: $font-roboto;
+            font-size: 14px;
+            font-weight: bold;
+          }
+          & > div.restaurant-info {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            max-width: 100%;
+            align-items: center;
+            padding-left: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-family: $font-roboto;
+            & > div.restaurant-info--naming {
+              display: flex;
+              flex-flow: column wrap;
+              justify-content: flex-start;
+              width: 50%;
+              // padding-bottom: 10px;
+              > .text--restoname {
+                font-family: $font-roboto;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 5px;
+              }
+              > .text--restolocation {
+                font-family: $font-roboto;
+                font-weight: 300;
+                font-size: 17px;
+              }
+            }
+            & > div.heart {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5em;
+              padding: 0 25px 0 0;
+              width: 20px;
+              height: 20px;
+              > i.fa-heart {
+                cursor: pointer;
+                &:hover {
+                  background: -webkit-linear-gradient(
+                    #9c59dc 0%,
+                    #ee74da 99.72%
+                  );
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  color: transparent;
+                  font-weight: 900;
+                  transition: ease 1s;
+                }
+              }
+            }
+          }
+        }
+        @media (min-width: 700px) {
+          width: 45.7%;
+        }
+      }
+    }
+  }
+
+  /* Section Footer */
+
+  &__footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 89%;
+    max-width: 1245px;
+    color: white;
+    @media (min-width: 700px) {
+      width: 700px;
+    }
+
+    &--index {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      width: 89%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+      > div {
+        @media (min-width: 700px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-self: center;
+          width: 100%;
+          padding-right: 40px;
+        }
+      }
+
+      > a {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        font-family: $font-roboto;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        margin-bottom: 10px;
+        @media (min-width: 700px) {
+          margin-right: 39px;
+        }
+
+        span > i {
+          font-size: 12px;
+          margin-right: 12px;
+        }
+      }
+
+      @media (min-width: 700px) {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 700px;
+        width: 100%;
+        padding-left: 20px;
+      }
+    }
+
+    &--page-restaurant {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+      > div {
+        @media (min-width: 699px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-self: center;
+          width: 100%;
+          padding-right: 40px;
+        }
+      }
+      > a {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        font-family: $font-roboto;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        margin-bottom: 10px;
+        @media (min-width: 699px) {
+          margin-right: 39px;
+        }
+
+        > span > i {
+          font-size: 12px;
+          margin-right: 12px;
+        }
+      }
+      @media (min-width: 699px) {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 700px;
+        width: 100%;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  /* Page restaurant */
+
+  &__menu {
+    @include flex-column-center;
+    width: 100%;
+    max-width: 699px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    background-color: $color-grey-light;
+    &__restaurant {
+      @include flex-column-center;
+      width: 100vw;
+      max-width: 699px;
+      &--image {
+        @include flex-column-center;
+        width: 100%;
+        > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-top: -50px;
+      border-radius: 40px 40px 0 0;
+      background-color: $color-grey-light;
+      &__heading {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 90%;
+        padding-top: 40px;
+        > i.fa-heart {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 15px;
+
+          &:hover {
+            background: -webkit-linear-gradient(#9c59dc 0%, #ee74da 99.72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            transition: ease 1s;
+          }
+        }
+      }
+
+      &__dishes-choice {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 94%;
+        > h3 {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          padding-left: 5px;
+          padding-top: 45px;
+        }
+        > div.green-dash {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          padding-left: 5px;
+          > div {
+            width: 40px;
+            height: 3px;
+            background-color: $colortertiary;
+            margin-top: 5px;
+          }
+        }
+
+        &__dish-cartridge {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          width: 100%;
+          min-height: 68px;
+          background-color: white;
+          border-radius: 20px;
+          margin-top: 14px;
+          box-shadow: 3px -4px 39px -7px rgba(59, 59, 59, 0.43);
+          cursor: pointer;
+          /* Animation menu : apparition progressive des plats */
+          transform: translateY(100%);
+          opacity: 0;
+          animation: slideInUp 1s forwards;
+          @for $i from 3 through 100 {
+            &:nth-child(#{$i}) {
+              animation-delay: #{($i - 3) * 0.3}s;
+            }
+          }
+
+          > div:nth-child(1) {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            margin: 12px 0 12px 11px;
+            // f
+            flex: 1 1;
+            margin-right: 20px;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            min-width: 0;
+
+            > h3 {
+              font-weight: 500;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+            }
+
+            > div.dish-subtitle {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              padding-top: 5px;
+              flex-grow: 1;
+              flex-shrink: 1;
+              max-width: 100%;
+              h4:nth-child(1) {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-right: 10px;
+              }
+              > h4.price {
+                font-weight: 500;
+              }
+            }
+          }
+          > .green-choice {
+            display: flex;
+            float: right;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            vertical-align: baseline;
+            width: 0px;
+            height: 0px;
+            overflow: hidden;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            color: white;
+            background-color: $colortertiary;
+            font-size: 25px;
+            cursor: pointer;
+            transition: width 330ms linear;
+            > i {
+              transform: rotate(0deg);
+              transition: transform 330ms linear;
+              display: block;
+            }
+          }
+          &:hover > .green-choice {
+            width: 70px;
+            height: auto;
+            > i {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+      &__order {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 83px;
+      }
+    }
+  }
+}

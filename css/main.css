@@ -334,65 +334,6 @@ header {
   border: 1px solid transparent;
 }
 
-/* Extension - silent class */
-.color-shape-button, .btn--exploration, .btn__order {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  border-radius: 25px;
-  background: -webkit-gradient(linear, right bottom, left top, from(#9c59dc), color-stop(99.72%, #ee74da));
-  background: linear-gradient(to left top, #9c59dc 0%, #ee74da 99.72%);
-  -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
-  color: white;
-}
-
-/* Button */
-.btn--exploration {
-  width: 220px;
-  height: 50px;
-}
-
-.btn--exploration:hover {
-  opacity: 0.8;
-  -webkit-box-shadow: 2px 8px 8px 0px black;
-          box-shadow: 2px 8px 8px 0px black;
-}
-
-.btn--text {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-
-.btn__order {
-  width: 186px;
-  height: 50px;
-}
-
-.btn__order > span.text {
-  color: white;
-  font-family: "Roboto", sans-serif;
-}
-
-.btn__order:hover {
-  opacity: 0.8;
-  -webkit-box-shadow: 2px 8px 8px 0px black;
-          box-shadow: 2px 8px 8px 0px black;
-}
-
-/* Section */
 .section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,13 +349,10 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  /* Section exploration */
-  /* Section "working" */
-  /* Section "restaurants" */
-  /* Section Footer */
-  /* Page restaurant */
 }
 
+/* Section */
+/* Section exploration */
 .section__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,6 +405,13 @@ header {
 
 .section__heading button:hover {
   cursor: pointer;
+}
+
+.section {
+  /* Section "working" */
+  /* Section "restaurants" */
+  /* Section Footer */
+  /* Page restaurant */
 }
 
 .section__working {
@@ -1155,7 +1100,7 @@ header {
   position: absolute;
   right: 20px;
   top: 40px;
-  font-size: 23px;
+  height: 23px;
   vertical-align: text-top;
 }
 
@@ -1873,4 +1818,62 @@ header {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 83px;
+}
+
+/* Extension - silent class */
+.color-shape-button, .btn--exploration, .btn__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9c59dc), color-stop(99.72%, #ee74da));
+  background: linear-gradient(to left top, #9c59dc 0%, #ee74da 99.72%);
+  -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+/* Button */
+.btn--exploration {
+  width: 220px;
+  height: 50px;
+}
+
+.btn--exploration:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
+}
+
+.btn--text {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.btn__order {
+  width: 186px;
+  height: 50px;
+}
+
+.btn__order > span.text {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn__order:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
 }

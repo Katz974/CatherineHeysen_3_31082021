@@ -17,7 +17,9 @@
     height: 50px;
     &:hover {
       opacity: 0.8;
-      box-shadow: 2px 8px 8px 0px black;
+      box-shadow: $btn-shadow-hover;
+      // background: lighten($btn-background, 3);
+      // box-shadow: darken($btn-shadow, 5);
     }
   }
 
@@ -39,7 +41,9 @@
     }
     &:hover {
       opacity: 0.8;
-      box-shadow: 2px 8px 8px 0px black;
+      box-shadow: $btn-shadow-hover;
+      // background: darken($btn-background, -3);
+      // box-shadow: darken($btn-shadow, 5);
     }
   }
 }

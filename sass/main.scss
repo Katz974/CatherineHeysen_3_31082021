@@ -1,11 +1,16 @@
-@import './base/roots';
-@import './utils/variables';
-@import './utils/mixins';
-@import './utils/keyframes';
-@import './components/logo';
-@import './layout/footer';
-@import './layout/header';
-@import './pages/loader';
-@import './pages/top-location';
-@import './components/button';
-@import './pages/pages';
+@import 'base/roots';
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/keyframes';
+
+@import 'components/logo';
+
+@import 'layout/footer';
+@import 'layout/header';
+
+@import 'pages/loader';
+@import 'pages/top-location';
+@import 'pages/pages';
+
+@import 'components/button';

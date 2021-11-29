@@ -1851,7 +1851,7 @@ header {
 }
 
 .btn--exploration:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
 }
@@ -1873,7 +1873,7 @@ header {
 }
 
 .btn__order:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.6);
 }
